@@ -1,4 +1,4 @@
-import { SortedArrays } from "./interfaces/sortedArrays";
+import { SortedArrays } from "../interfaces/sortedArrays";
 
 export function separateCharacters(input: string): SortedArrays {
     const result: SortedArrays = {
