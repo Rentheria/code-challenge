@@ -42,3 +42,11 @@ describe('sortString', () => {
     expect(result).toEqual('acdfsxBCDFSS239!@%$%');
   });
 });
+
+describe('sortString', () => {
+  it('should sort an empty input string according to the given criteria', () => {
+    const input = '';
+    const result = sortString(input);
+    expect(result).toEqual('');
+  });
+});
