@@ -1,0 +1,17 @@
+{
+    "name": "Alphanumeric String Sort",
+    "version": "0.1.1",
+    "scripts": {
+        "start": "cd dist && node exercise.js",
+        "build": "cd src && tsc --project ../tsconfig.json",
+        "test": "cd src && jest --coverage"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "jest": "^29.7.0",
+        "jest-html-reporter": "^3.10.2",
+        "jest-junit": "^16.0.0",
+        "ts-jest": "^29.1.2",
+        "ts-node": "^10.9.2"
+    }
+}
