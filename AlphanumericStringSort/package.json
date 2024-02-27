@@ -3,7 +3,8 @@
     "version": "0.1.1",
     "scripts": {
         "start": "cd dist && node exercise.js",
-        "build": "cd app && tsc --project ../tsconfig.json"
+        "build": "cd src && tsc --project ../tsconfig.json",
+        "test": "cd src && jest"
     },
     "devDependencies": {
         "@types/jest": "^29.5.12",

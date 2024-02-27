@@ -1,10 +1,6 @@
-interface SortedArrays {
-    letters: string[];
-    numbers: string[];
-    specialCharacters: string[];
-}
+import { SortedArrays } from "./interfaces/sortedArrays";
 
-function separateCharacters(input: string): SortedArrays {
+export function separateCharacters(input: string): SortedArrays {
     const result: SortedArrays = {
         letters: [],
         numbers: [],
@@ -24,20 +20,20 @@ function separateCharacters(input: string): SortedArrays {
     return result;
 }
 
-function isLetter(char: string): boolean {
+export function isLetter(char: string): boolean {
     return /[a-zA-Z]/.test(char);
 }
 
-function isNumber(char: string): boolean {
+export function isNumber(char: string): boolean {
     return /[0-9]/.test(char);
 }
 
-function sortLetters(letters: string[]): string[] {
+export function sortLetters(letters: string[]): string[] {
     const sortedLetters =  letters.sort();
     return sortByCase(sortedLetters);
 }
 
-function sortByCase(letters: any): string[] {
+export function sortByCase(letters: any): string[] {
     let splitIndex = letters.findIndex(char => /[a-z]/.test(char));
     if (splitIndex === -1) {
         splitIndex = letters.length; // If no lowercase letter found, split at the end
@@ -48,7 +44,7 @@ function sortByCase(letters: any): string[] {
     return secondPart.concat(firstPart);
 }
 
-function sortNumbers(numbers: string[]): string[] {
+export function sortNumbers(numbers: string[]): string[] {
     return numbers.sort((a, b) => {
         const numA = parseInt(a);
         const numB = parseInt(b);
@@ -59,7 +55,7 @@ function sortNumbers(numbers: string[]): string[] {
     });
 }
 
-function sortString(input: string): string {
+export function sortString(input: string): string {
     if (input.length === 0) return "";
 
     const { letters, numbers, specialCharacters } = separateCharacters(input);
@@ -68,7 +64,3 @@ function sortString(input: string): string {
 
     return sortedLetters.join('') + sortedNumbers.join('') + specialCharacters.join('');
 }
-
-const inputString = "aB3c9!2x@C%$%SFSDdsf";
-const sortedString = sortString(inputString);
-console.log(sortedString);
