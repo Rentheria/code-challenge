@@ -7,4 +7,4 @@ for (const text of text_1.inputs) {
     console.log(`The string ${text} is:`);
     console.log(`   ${isValid ? 'valid' : 'invalid'}`);
 }
-//# sourceMappingURL=exercise.js.map
+//# sourceMappingURL=app.js.map

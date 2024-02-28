@@ -2,7 +2,7 @@
     "name": "Alphanumeric String Sort",
     "version": "0.1.1",
     "scripts": {
-        "start": "cd dist && node exercise.js",
+        "start": "cd dist && node app.js",
         "build": "cd src && tsc --project ../tsconfig.json",
         "test": "cd src && jest --coverage"
     },
