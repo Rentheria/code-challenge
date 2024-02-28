@@ -1,5 +1,5 @@
 {
-    "name": "Alphanumeric String Sort",
+    "name": "balanced-parentheses",
     "version": "0.1.1",
     "scripts": {
         "start": "cd dist && node app.js",
