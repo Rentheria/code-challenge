@@ -4,5 +4,9 @@
       "module": "CommonJS",
       "outDir": "dist",
       "sourceMap": true
-    }
+    },
+    "exclude": [
+      "node_modules", // Exclude node_modules directory
+      "jest.config.ts" // Exclude jest.config.js file
+    ]
   }

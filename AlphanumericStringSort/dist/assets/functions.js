@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sortString = exports.sortNumbers = exports.sortByCase = exports.sortLetters = exports.isNumber = exports.isLetter = exports.separateCharacters = void 0;
 function separateCharacters(input) {
     const result = {
         letters: [],
@@ -17,16 +20,20 @@ function separateCharacters(input) {
     }
     return result;
 }
+exports.separateCharacters = separateCharacters;
 function isLetter(char) {
     return /[a-zA-Z]/.test(char);
 }
+exports.isLetter = isLetter;
 function isNumber(char) {
     return /[0-9]/.test(char);
 }
+exports.isNumber = isNumber;
 function sortLetters(letters) {
     const sortedLetters = letters.sort();
     return sortByCase(sortedLetters);
 }
+exports.sortLetters = sortLetters;
 function sortByCase(letters) {
     let splitIndex = letters.findIndex(char => /[a-z]/.test(char));
     if (splitIndex === -1) {
@@ -36,6 +43,7 @@ function sortByCase(letters) {
     const secondPart = letters.slice(splitIndex);
     return secondPart.concat(firstPart);
 }
+exports.sortByCase = sortByCase;
 function sortNumbers(numbers) {
     return numbers.sort((a, b) => {
         const numA = parseInt(a);
@@ -46,6 +54,7 @@ function sortNumbers(numbers) {
         return numA - numB;
     });
 }
+exports.sortNumbers = sortNumbers;
 function sortString(input) {
     if (input.length === 0)
         return "";
@@ -54,7 +63,5 @@ function sortString(input) {
     const sortedNumbers = sortNumbers(numbers);
     return sortedLetters.join('') + sortedNumbers.join('') + specialCharacters.join('');
 }
-const inputString = "aB3c9!2x@C%$%SFSDdsf";
-const sortedString = sortString(inputString);
-console.log(sortedString);
-//# sourceMappingURL=exercise.js.map
+exports.sortString = sortString;
+//# sourceMappingURL=functions.js.map
