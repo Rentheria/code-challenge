@@ -15,6 +15,7 @@ yarn-error.log
 
 #Projects Node Modules
 /AlphanumericStringSort/node_modules
+/balanced-parentheses/node_modules
 
 # System files
 .DS_Store
